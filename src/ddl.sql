@@ -30,3 +30,23 @@ CREATE TABLE alunos (
     nome VARCHAR(255) NOT NULL,
     cpf CHAR(11)
 );
+
+-- Chave estrangeira:
+CREATE TABLE genero(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL UNIQUE
+);
+
+CREATE TABLE livros(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    id_genero INT REFERENCES genero (id)
+);
+
+-- Conta de usuario:
+CREATE TABLE cliente(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    agencia CHAR(100) NOT NULL,
+    conta CHAR(100) NOT NULL,
+    UNIQUE (agencia, conta);
+);
