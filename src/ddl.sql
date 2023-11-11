@@ -43,6 +43,13 @@ CREATE TABLE livros(
     id_genero INT REFERENCES genero (id)
 );
 
+CREATE TABLE autor(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE livros_possuem_
+
 -- Conta de usuario:
 CREATE TABLE cliente(
     id INT AUTO_INCREMENT PRIMARY KEY,
