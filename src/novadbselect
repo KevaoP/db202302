@@ -1,0 +1,8 @@
+USE quiz;
+
+SELECT * FROM quizzes_possuem_questoes;
+
+SELECT * FROM alternativas AS a LEFT JOIN questoes AS questoes
+ON(a.id_questoes = q.id)
+WHERE a.correta = true;
+

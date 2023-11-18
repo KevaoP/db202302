@@ -1,0 +1,18 @@
+INSERT INTO quizzes(id,nome) VALUES
+    (1, 'Primeiro Quiz'),
+    (2, 'Segundo Quiz');
+
+INSERT INTO questoes(id, enunciado) VALUES
+    (1, 'Qual meu nome?'),
+    (2, 'Qual minha idade?');
+
+INSERT INTO quizzes_possuem_questoes(id_quiz, id_questao) VALUES
+    (1, 1),
+    (1, 2),
+    (2, 1);
+
+INSERT INTO alternativas(id, texto, correta) VALUES
+    (1, 'Kevin', 1, true),
+    (2, 'kevão', 1 , true),
+    (3, '22', 2, true),
+    (4, '23', 2, true);
