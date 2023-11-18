@@ -1,3 +1,4 @@
+-- Active: 1700312079874@@127.0.0.1@3306@wpdb
 CREATE DATABASE quiz;
 
 USE quiz
@@ -16,10 +17,10 @@ CREATE TABLE questoes(
 
 CREATE TABLE quizzes_possuem_questoes(
     id_quiz INT NOT NULL,
-    id_questao INT NOT NULL,
-    PRIMARY KEY (id_quiz,id_questao),
+    id_questoes INT NOT NULL,
+    PRIMARY KEY (id_quiz,id_questoes),
     FOREIGN KEY (id_quiz) REFERENCES quizzes (id),
-    Foreign Key (id_questoes) REFERENCES (id)
+    Foreign Key (id_questoes) REFERENCES questoes (id)
 );
 
 SHOW FIELDS FROM quizzes_possuem_questoes;
