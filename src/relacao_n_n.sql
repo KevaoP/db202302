@@ -1,0 +1,25 @@
+CREATE DATABASE relacao;
+
+USE relacao;
+
+CREATE TABLE n1 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome1 VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE n2(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome2 VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE n1_para_n2(
+    id_n1 INT,
+    id_n2 INT,
+    PRIMARY KEY (id_n1, id_n2),
+    FOREIGN KEY (id_n1) REFERENCES n1 (id),
+    FOREIGN KEY (id_n2) REFERENCES n2 (id)
+);
+
+SHOW FIELDS FROM n1_para_n2;
+
+DROP DATABASE relacao;
