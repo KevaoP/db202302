@@ -42,3 +42,6 @@ CREATE TABLE historico(
     retirada DATE,
     devolucao DATE
 );
+
+# Mostra a tabela criada
+SHOW FIELDS FROm historico;
